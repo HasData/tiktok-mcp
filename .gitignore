@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+*.log

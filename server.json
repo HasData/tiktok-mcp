@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.hasdata/tiktok",
+  "title": "HasData TikTok",
+  "description": "Public TikTok profiles, videos, comments and keyword search as JSON. No developer account.",
+  "version": "1.0.0",
+  "websiteUrl": "https://hasdata.com/apis/tiktok-scraper-api",
+  "repository": { "url": "https://github.com/HasData/tiktok-mcp", "source": "github" },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "headers": [
+        { "name": "x-api-key", "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.", "isRequired": true, "isSecret": true }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@hasdata/tiktok-mcp",
+      "version": "1.0.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "HASDATA_API_KEY", "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.", "isRequired": true, "isSecret": true }
+      ]
+    }
+  ]
+}
