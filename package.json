@@ -1,16 +1,40 @@
 {
   "name": "@hasdata/tiktok-mcp",
   "mcpName": "com.hasdata/tiktok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for public TikTok data through HasData's hosted API: profile lookup, an account's videos, video comments and reply threads, and keyword search over videos or creators. No TikTok developer account.",
   "type": "module",
-  "bin": { "hasdata-tiktok-mcp": "index.mjs" },
-  "files": ["index.mjs", "README.md", "LICENSE"],
-  "scripts": { "test": "node --test" },
-  "dependencies": { "mcp-remote": "^0.1.43" },
-  "engines": { "node": ">=18" },
+  "bin": {
+    "hasdata-tiktok-mcp": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "mcp-remote": "^0.1.43"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/HasData/tiktok-mcp.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HasData/tiktok-mcp.git"
+  },
   "homepage": "https://hasdata.com/apis/tiktok-scraper-api",
-  "keywords": ["mcp", "tiktok", "tiktok-mcp", "tiktok-scraper", "social-media", "model-context-protocol", "hasdata", "scraper"]
+  "keywords": [
+    "mcp",
+    "tiktok",
+    "tiktok-mcp",
+    "tiktok-scraper",
+    "social-media",
+    "model-context-protocol",
+    "hasdata",
+    "scraper"
+  ]
 }

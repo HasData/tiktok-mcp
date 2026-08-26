@@ -1,6 +1,6 @@
 [project]
 name = "hasdata-tiktok-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "MCP server for public TikTok data through HasData's hosted API. No TikTok developer account."
 readme = "README.md"
 requires-python = ">=3.10"
