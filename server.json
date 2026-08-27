@@ -3,7 +3,7 @@
   "name": "com.hasdata/tiktok",
   "title": "HasData TikTok",
   "description": "Public TikTok profiles, videos, comments and keyword search as JSON. No developer account.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "websiteUrl": "https://hasdata.com/apis/tiktok-scraper-api",
   "repository": {
     "url": "https://github.com/HasData/tiktok-mcp",
@@ -27,7 +27,7 @@
     {
       "registryType": "npm",
       "identifier": "@hasdata/tiktok-mcp",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       },
@@ -43,7 +43,7 @@
     {
       "registryType": "pypi",
       "identifier": "hasdata-tiktok-mcp",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
