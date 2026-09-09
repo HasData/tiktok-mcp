@@ -6,6 +6,8 @@ A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf
 
 It reads public data that a signed-out visitor can see. It does not sign in, post, or act as an account.
 
+**1,000 free credits every month, no card required**, which is 100 TikTok calls.
+
 ```
 https://mcp.hasdata.com/api/mcp?apis=tiktok
 ```
@@ -371,11 +373,11 @@ Results that carry data also carry a `requestMetadata.id` worth quoting in suppo
 
 Every TikTok tool costs **10 credits per successful call**. Response size does not change the price. A full page of videos costs the same as a profile with one field.
 
-The free trial is **1,000 credits over 30 days with no card**, which is 100 TikTok calls. After that an active account keeps getting 100 credits topped up each day whenever its balance drops below 100, so a low-volume agent runs on the free tier indefinitely.
+The free tier is **1,000 credits every month with no card**, which is 100 TikTok calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
 
 Paid plans start at **$49 a month** for 200,000 credits, which is 20,000 calls. The unit price falls with volume, from **$2.45 per 1,000 calls** on the entry plan to **$0.99** on Business, **$0.83** on Growth and **$0.75** on the largest [high-volume plans](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=tiktok-mcp).
 
-Your plan also sets concurrency. The free trial allows 1 request at a time, Startup 15, Business 30, Growth 50, and the high-volume plans run from 200 to 1,500. Handle the overflow case defensively in anything unattended, because an agent that fans out will reach the ceiling before you do.
+Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 15, Business 30, Growth 50, and the high-volume plans run from 200 to 1,500. Handle the overflow case defensively in anything unattended, because an agent that fans out will reach the ceiling before you do.
 
 A request that comes back non-200 is not billed. A successful call that finds nothing is still a call.
 
