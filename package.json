@@ -2,7 +2,7 @@
   "name": "@hasdata/tiktok-mcp",
   "mcpName": "com.hasdata/tiktok",
   "version": "1.0.1",
-  "description": "MCP server for public TikTok data through HasData's hosted API: profile lookup, an account's videos, video comments and reply threads, and keyword search over videos or creators. No TikTok developer account.",
+  "description": "MCP server for public TikTok data through HasData's hosted API: profile lookup, an account's videos, video comments and reply threads, and keyword search over videos or creators. No TikTok developer account. 1,000 free credits every month.",
   "type": "module",
   "bin": {
     "hasdata-tiktok-mcp": "index.mjs"
