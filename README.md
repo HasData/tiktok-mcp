@@ -227,7 +227,7 @@ Prompts, not code. Paste one in and the agent picks the tool itself. Each is ann
 
 *Four calls, 40 credits. One search, then one profile each. Every author in a search result carries a link straight to its profile endpoint, so the agent never has to guess a handle.*
 
-Paging costs a call each time. A creator audit that reads a profile then walks five pages of videos is six calls and 60 credits. The trial goes further on narrow questions than on open-ended crawls.
+Paging costs a call each time. A creator audit that reads a profile then walks five pages of videos is six calls and 60 credits. The free tier goes further on narrow questions than on open-ended crawls.
 
 ## Tools
 
