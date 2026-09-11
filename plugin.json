@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hasdata-tiktok-mcp",
+  "version": "1.0.1",
+  "description": "TikTok MCP server for Cursor. Public profiles, an account's videos, video comments and reply threads, and keyword search over videos or creators, as structured JSON. Remote MCP server hosted by HasData, connects over streamable HTTP with your HasData API key.",
+  "author": {
+    "name": "HasData",
+    "url": "https://hasdata.com"
+  },
+  "homepage": "https://hasdata.com/apis/tiktok-scraper-api",
+  "repository": "https://github.com/HasData/tiktok-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "tiktok",
+    "tiktok-mcp",
+    "tiktok-scraper",
+    "social-media",
+    "model-context-protocol",
+    "hasdata",
+    "scraper"
+  ]
+}
