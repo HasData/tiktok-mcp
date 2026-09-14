@@ -231,12 +231,12 @@ Paging costs a call each time. A creator audit that reads a profile then walks f
 
 ## Tools
 
-| Tool | Credits | What it returns |
-| :--- | :--- | :--- |
-| `hasdata_tiktok_comments_getTikTokComments` | 10 | Fetches the comments on a public TikTok video by its numeric video id, or the replies to a specific comment when commentId is given |
-| `hasdata_tiktok_posts_getTikTokPosts` | 10 | A page of ~35 videos plus a `nextPageToken`; pass that token back to walk the account history one page at a time |
-| `hasdata_tiktok_profile_getTikTokProfile` | 10 | Fetches a public TikTok profile by username (handle) and returns nickname, biography, bio link, avatar URLs, verified/private flags, account creation time, and… |
-| `hasdata_tiktok_search_getTikTokSearch` | 10 | Searches TikTok by keyword and returns either videos (with description, hashtags, mentions, like/comment/share/play counts, cover and playable video URLs, music, and… |
+| Tool | What it returns |
+| --- | --- |
+| `hasdata_tiktok_comments_getTikTokComments` | Fetches the comments on a public TikTok video by its numeric video id, or the replies to a specific comment when commentId is given. 10 credits a call |
+| `hasdata_tiktok_posts_getTikTokPosts` | A page of ~35 videos plus a `nextPageToken`; pass that token back to walk the account history one page at a time. 10 credits a call |
+| `hasdata_tiktok_profile_getTikTokProfile` | Fetches a public TikTok profile by username (handle) and returns nickname, biography, bio link, avatar URLs, verified/private flags, account creation time, and…. 10 credits a call |
+| `hasdata_tiktok_search_getTikTokSearch` | Searches TikTok by keyword and returns either videos (with description, hashtags, mentions, like/comment/share/play counts, cover and playable video URLs, music, and…. 10 credits a call |
 
 Four tools, all read-only. Samples below are trimmed from real calls, and the numbers in them move as TikTok updates. Read them as shapes. Each tool name links to its endpoint reference, which carries the full field list.
 
