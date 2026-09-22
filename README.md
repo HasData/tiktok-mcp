@@ -9,7 +9,7 @@ It reads public data that a signed-out visitor can see. It does not sign in, pos
 **1,000 free credits every month, no card required**, which is 100 TikTok calls.
 
 ```
-https://mcp.hasdata.com/api/mcp?apis=tiktok
+https://mcp.hasdata.com/mcp?apis=tiktok
 ```
 
 [![Glama score](https://glama.ai/mcp/servers/HasData/tiktok-mcp/badges/score.svg)](https://glama.ai/mcp/servers/HasData/tiktok-mcp)
@@ -46,7 +46,7 @@ The server URL is the same for every client. We run it hands-on in Claude Code a
 
 | Field | Value |
 | :--- | :--- |
-| URL | `https://mcp.hasdata.com/api/mcp?apis=tiktok` |
+| URL | `https://mcp.hasdata.com/mcp?apis=tiktok` |
 | Transport | HTTP, streamable |
 | Auth header | `x-api-key: HASDATA_API_KEY` |
 
@@ -56,7 +56,7 @@ Clients with OAuth support can add the same URL as a connector and sign in witho
 <summary><b>Claude Code</b></summary>
 
 ```bash
-claude mcp add --transport http tiktok "https://mcp.hasdata.com/api/mcp?apis=tiktok" \
+claude mcp add --transport http tiktok "https://mcp.hasdata.com/mcp?apis=tiktok" \
   --header "x-api-key: HASDATA_API_KEY"
 ```
 
@@ -65,7 +65,7 @@ claude mcp add --transport http tiktok "https://mcp.hasdata.com/api/mcp?apis=tik
 <details>
 <summary><b>Claude Desktop</b></summary>
 
-Settings, then Connectors, then Add custom connector, then paste `https://mcp.hasdata.com/api/mcp?apis=tiktok` and sign in.
+Settings, then Connectors, then Add custom connector, then paste `https://mcp.hasdata.com/mcp?apis=tiktok` and sign in.
 
 For the config-file route, Claude Desktop loads only local (stdio) servers, so it reaches a remote server through a stdio launcher. The `@hasdata/tiktok-mcp` package is that launcher, and it reads the key from the environment. Add this to `claude_desktop_config.json`:
 
@@ -106,7 +106,7 @@ Python instead of Node? Swap the launcher for the PyPI package, which `uvx` runs
 {
   "mcpServers": {
     "tiktok": {
-      "url": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "url": "https://mcp.hasdata.com/mcp?apis=tiktok",
       "headers": { "x-api-key": "HASDATA_API_KEY" }
     }
   }
@@ -124,7 +124,7 @@ Python instead of Node? Swap the launcher for the PyPI package, which `uvx` runs
 {
   "mcpServers": {
     "tiktok": {
-      "serverUrl": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "serverUrl": "https://mcp.hasdata.com/mcp?apis=tiktok",
       "headers": { "x-api-key": "HASDATA_API_KEY" }
     }
   }
@@ -140,7 +140,7 @@ Python instead of Node? Swap the launcher for the PyPI package, which `uvx` runs
 {
   "mcpServers": {
     "tiktok": {
-      "url": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "url": "https://mcp.hasdata.com/mcp?apis=tiktok",
       "type": "streamableHttp",
       "headers": { "x-api-key": "HASDATA_API_KEY" },
       "disabled": false
@@ -161,7 +161,7 @@ Python instead of Node? Swap the launcher for the PyPI package, which `uvx` runs
   "servers": {
     "tiktok": {
       "type": "http",
-      "url": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "url": "https://mcp.hasdata.com/mcp?apis=tiktok",
       "headers": { "x-api-key": "HASDATA_API_KEY" }
     }
   }
@@ -177,7 +177,7 @@ Python instead of Node? Swap the launcher for the PyPI package, which `uvx` runs
 
 ```toml
 [mcp_servers.tiktok]
-url = "https://mcp.hasdata.com/api/mcp?apis=tiktok"
+url = "https://mcp.hasdata.com/mcp?apis=tiktok"
 
 [mcp_servers.tiktok.headers]
 "x-api-key" = "HASDATA_API_KEY"
@@ -194,7 +194,7 @@ url = "https://mcp.hasdata.com/api/mcp?apis=tiktok"
 {
   "mcpServers": {
     "tiktok": {
-      "httpUrl": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "httpUrl": "https://mcp.hasdata.com/mcp?apis=tiktok",
       "headers": { "x-api-key": "HASDATA_API_KEY" }
     }
   }

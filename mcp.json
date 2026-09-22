@@ -3,7 +3,7 @@
   "mcpServers": {
     "tiktok": {
       "type": "streamable-http",
-      "url": "https://mcp.hasdata.com/api/mcp?apis=tiktok",
+      "url": "https://mcp.hasdata.com/mcp?apis=tiktok",
       "headers": {
         "x-api-key": "YOUR_HASDATA_API_KEY"
       }
