@@ -1,0 +1,36 @@
+---
+description: How to pull TikTok profiles, post feeds, keyword search and comments through the HasData MCP server
+alwaysApply: false
+---
+
+# TikTok through HasData
+
+Four tools. `hasdata_tiktok_profile_getTikTokProfile` and `hasdata_tiktok_posts_getTikTokPosts` take a `handle`, `hasdata_tiktok_search_getTikTokSearch` takes a `keyword`, and `hasdata_tiktok_comments_getTikTokComments` takes a `videoId`.
+
+`type` on the search chooses between `video` and `user`, so the same keyword answers two different questions depending on which one you send.
+
+## A handle that does not exist looks like a success
+
+The call returns 200, `requestMetadata.status` reads `ok`, and the payload carries an `error` string with no `profile` or `posts` key. Nothing else marks it. Test for the object you came for before reading fields, or an account that does not exist is reported as an account with nothing to say.
+
+A malformed handle is the other case and it fails the schema with a 422 on `handle`, so the two failures need different messages.
+
+## Engagement is on the post, not the profile
+
+A post carries `likes`, `comments`, `shares`, `plays`, `reposts` and `collects`, alongside `description`, `createTime`, `duration`, `width`, `height` and an `author` block. The profile carries the account totals as `followers`, `follows`, `friends`, `likes` and `videos`.
+
+`createTime` is an ISO timestamp on posts and comments, so recency is answerable directly rather than by inference.
+
+## The feed and the search do not return the same thing
+
+Search results carry a `hashtags` array on most videos and no `mentions` at all. The profile feed is the mirror image, with `mentions` on a minority of posts and no `hashtags` anywhere. A tag analysis built on the feed finds nothing and reports an account that uses no tags, so parse the `description` when you need tags from a feed.
+
+The media URLs are optional on both. `playUrl`, `downloadUrl`, `dynamicCoverUrl` and `ratio` are missing on some videos while `coverUrl` is there throughout, so test the key rather than assuming a video is playable.
+
+## Paging and ids
+
+`pagination` carries `count`, `hasMore` and `nextPageToken` on all three list tools, and the comments tool adds `total`, which is the whole comment count rather than the page. Read `total` before deciding to walk a thread, because a popular video runs to thousands and each page is a billed call.
+
+`videoId` and `commentId` are long numeric ids that have to stay strings. Putting one through a number loses the last digits and fetches nothing. The id for a video is `posts[].id` from the feed or `videos[].id` from the search.
+
+Replies live under `replies` on a comment, and `replyCount` says how many exist. Pulling a reply thread means passing that comment's id as `commentId`.
