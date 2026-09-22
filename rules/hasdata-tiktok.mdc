@@ -21,11 +21,11 @@ A post carries `likes`, `comments`, `shares`, `plays`, `reposts` and `collects`,
 
 `createTime` is an ISO timestamp on posts and comments, so recency is answerable directly rather than by inference.
 
-## The feed and the search do not return the same thing
+## Optional fields follow the account, not the endpoint
 
-Search results carry a `hashtags` array on most videos and no `mentions` at all. The profile feed is the mirror image, with `mentions` on a minority of posts and no `hashtags` anywhere. A tag analysis built on the feed finds nothing and reports an account that uses no tags, so parse the `description` when you need tags from a feed.
+`hashtags` and `mentions` are present only on videos that carry them, and the rate swings with the account rather than with the tool. Sampled feeds ran from no tagged posts at all to every post tagged, so a single account tells you nothing about the next one and an absent array means this account does not tag rather than that the field is missing. Parse the `description` when you need tags the account wrote inline.
 
-The media URLs are optional on both. `playUrl`, `downloadUrl`, `dynamicCoverUrl` and `ratio` are missing on some videos while `coverUrl` is there throughout, so test the key rather than assuming a video is playable.
+The media URLs are optional too. `playUrl`, `downloadUrl`, `dynamicCoverUrl` and `ratio` are missing on some videos while `coverUrl` is there throughout, so test the key rather than assuming a video is playable.
 
 ## Paging and ids
 

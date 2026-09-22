@@ -287,7 +287,7 @@ A page of an account's videos by handle, newest first.
 
 One call returns about thirty videos plus `pagination`, which carries `hasMore` and the `nextPageToken` you feed back to walk the account history one page at a time. Each video carries `id`, `description`, `url`, `duration`, the cover and playable video URLs, `music`, and the `likes`, `comments`, `shares`, `plays`, `collects` and `reposts` counts as integers.
 
-> `hashtags` and `mentions` are present only on videos that use them. In one real page of 27 videos, 4 carried a `hashtags` array and 10 carried `mentions`. Test for the key before you read it, rather than assuming every video has both.
+> `hashtags` and `mentions` are present only on videos that carry them, and how often that happens follows the account rather than the endpoint. Sampled feeds ranged from no tagged posts at all to every post tagged. Test for the key before you read it, and read an absent array as an account that does not tag.
 
 ```json
 {
