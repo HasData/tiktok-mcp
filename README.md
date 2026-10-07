@@ -16,6 +16,7 @@ https://mcp.hasdata.com/mcp?apis=tiktok
 [![tool contract](https://github.com/HasData/tiktok-mcp/actions/workflows/contract.yml/badge.svg)](https://github.com/HasData/tiktok-mcp/actions/workflows/contract.yml)
 [![MCP](https://img.shields.io/badge/MCP-remote%20%7C%20streamable%20HTTP-6366f1?style=flat-square)](https://modelcontextprotocol.io)
 [![Tools](https://img.shields.io/badge/tools-4-10b981?style=flat-square)](#tools)
+- [Prompts and resources](#prompts-and-resources)
 [![npm](https://img.shields.io/npm/v/@hasdata/tiktok-mcp?style=flat-square&logo=npm&label=npm&color=cb3837)](https://www.npmjs.com/package/@hasdata/tiktok-mcp)
 [![PyPI](https://img.shields.io/pypi/v/hasdata-tiktok-mcp?style=flat-square&logo=pypi&logoColor=white&label=PyPI&color=3775a9)](https://pypi.org/project/hasdata-tiktok-mcp/)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
@@ -359,6 +360,25 @@ With `type: video` the response holds videos in the same shape the posts tool re
   "hasdataPostsLink": "https://api.hasdata.com/scrape/tiktok/posts?handle=la.mooncoldbrew"
 }
 ```
+
+## Prompts and resources
+
+The server ships 2 prompts, ready-made workflows a client can offer instead of making the user compose a tool call.
+
+| Prompt | What it does |
+| --- | --- |
+| `tiktok_trend` | See what is being posted on TikTok about a topic. |
+| `tiktok_profile` | Look up a public TikTok profile. |
+
+Alongside them the server exposes one resource, the accepted values of the single parameter that takes a fixed list. Reading it is cheaper than learning the vocabulary from a rejected call, and it costs no credits.
+
+| Parameter | Values | What it selects |
+| --- | ---: | --- |
+| `type` | 2 | What to search for — videos or users. Defaults to video. |
+
+Its URI is `hasdata://tiktok/type`.
+
+Both lists are served without an API key, so a client can read them before a user has signed up.
 
 ## Errors and failure paths
 
