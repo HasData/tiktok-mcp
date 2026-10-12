@@ -34,3 +34,9 @@ The media URLs are optional too. `playUrl`, `downloadUrl`, `dynamicCoverUrl` and
 `videoId` and `commentId` are long numeric ids that have to stay strings. Putting one through a number loses the last digits and fetches nothing. The id for a video is `posts[].id` from the feed or `videos[].id` from the search.
 
 Replies live under `replies` on a comment, and `replyCount` says how many exist. Pulling a reply thread means passing that comment's id as `commentId`.
+
+## Prompts and resources
+
+The server also serves resources that spell out the accepted values of every parameter that takes a fixed list, each one at `hasdata://tiktok/<parameter>`. Reading one spends no credits and makes no upstream request, which beats discovering the vocabulary from a rejected call. Listing them needs no API key either, so a client can read them before the user has connected an account.
+
+Ready-made prompts cover the usual workflows. Offer one of those before composing a tool call by hand.
