@@ -2,7 +2,7 @@
 
 <!-- mcp-name: com.hasdata/tiktok -->
 
-A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf and any other MCP client four read-only TikTok tools. Look up a public profile, walk an account's videos, read the comments on a video, and search TikTok for videos or creators, all as structured JSON, with no TikTok developer account and no OAuth.
+A hosted [TikTok MCP server](https://hasdata.com/mcp/tiktok?utm_source=github&utm_medium=syndication&utm_campaign=tiktok-mcp&utm_content=readme-intro) that gives Claude, Cursor, Windsurf and any other MCP client four read-only TikTok tools. Look up a public profile, walk an account's videos, read the comments on a video, and search TikTok for videos or creators, all as structured JSON, with no TikTok developer account and no OAuth.
 
 It reads public data that a signed-out visitor can see. It does not sign in, post, or act as an account.
 
@@ -404,7 +404,7 @@ The free tier is **1,000 credits every month with no card**, which is 100 TikTok
 
 Paid plans start at **$59 a month** for 200,000 credits, which is 20,000 calls. The unit price falls with volume, from **$2.95 per 1,000 calls** on the entry plan to **$1.19** on Basic and **$0.83** across the Growth tiers. Current figures live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=tiktok-mcp).
 
-Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 5, Basic 15, and the Growth tiers run from 50 to 500. Handle the overflow case defensively in anything unattended, because an agent that fans out will reach the ceiling before you do.
+Your plan also sets concurrency. The free tier allows 5 requests at a time, Startup 5, Basic 15, and the Growth tiers run from 50 to 500. Handle the overflow case defensively in anything unattended, because an agent that fans out will reach the ceiling before you do.
 
 A request that comes back non-200 is not billed. A successful call that finds nothing is still a call.
 
